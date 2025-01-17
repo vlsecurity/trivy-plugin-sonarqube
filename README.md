@@ -7,7 +7,7 @@ A [Trivy](https://github.com/aquasecurity/trivy) plugin that converts JSON repor
 
 install plugin:
 ```
-$ trivy plugin install github.com/umax/trivy-plugin-sonarqube
+$ trivy plugin install github.com/vlsecurity/trivy-plugin-sonarqube
 ```
 
 check the installation:
@@ -47,7 +47,7 @@ scan-deps:
     entrypoint: [""]
   before_script:
     - apk add --no-cache python3
-    - trivy plugin install github.com/umax/trivy-plugin-sonarqube
+    - trivy plugin install github.com/vlsecurity/trivy-plugin-sonarqube
   script:
     - trivy fs
       --security-checks=vuln
